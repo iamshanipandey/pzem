@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PZEM Live Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>⚡ PZEM Live Dashboard</h1>
+
+  <div class="dashboard">
+    <div class="card"><div class="label">Voltage</div><div class="value" id="voltage">--</div></div>
+    <div class="card"><div class="label">Current</div><div class="value" id="current">--</div></div>
+    <div class="card"><div class="label">Power</div><div class="value" id="power">--</div></div>
+    <div class="card"><div class="label">Energy</div><div class="value" id="energy">--</div></div>
+    <div class="card"><div class="label">Power Factor</div><div class="value" id="pf">--</div></div>
+    <div class="card"><div class="label">Frequency</div><div class="value" id="frequency">--</div></div>
+    <div class="card"><div class="label">Relay</div><div class="value" id="relay">--</div></div>
+  </div>
+
+  <div class="chart-container">
+    <canvas id="voltageChart"></canvas>
+  </div>
+
+  <button id="toggleBtn">▶ Start Live</button>
+  <p id="status">Stopped</p>
+
+  <h2>🕒 Schedule Relay Control</h2>
+
+  <div class="scheduler">
+    <label>Action:</label>
+    <select id="relayAction">
+      <option value="ON">Turn ON</option>
+      <option value="OFF">Turn OFF</option>
+    </select>
+
+    <label>Date & Time:</label>
+    <input type="datetime-local" id="scheduleTime">
+
+    <label>Or select countdown:</label>
+    <select id="countdown">
+      <option value="">--None--</option>
+      <option value="0.1">0.1 sec</option>
+      <option value="15">15 min</option>
+      <option value="30">30 min</option>
+      <option value="60">1 hour</option>
+      <option value="180">3 hours</option>
+      <option value="360">6 hours</option>
+    </select>
+
+    <button id="scheduleBtn">Schedule</button>
+    <p id="scheduleStatus"></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="scheduler.js"></script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e8f5e9 0%, #e1f5fe 100%);
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2d5f5d;
+      margin-bottom: 35px;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto 40px;
+      padding: 0 10px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(45, 95, 93, 0.08);
+      border: 1px solid rgba(129, 199, 132, 0.2);
+    }
+
+    .label {
+      font-size: 14px;
+      color: #5a8f8c;
+      font-weight: 500;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .value {
+      font-size: 28px;
+      font-weight: 600;
+      color: #2d5f5d;
+      margin-top: 4px;
+    }
+
+    .chart-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(45, 95, 93, 0.1);
+      border: 1px solid rgba(129, 199, 132, 0.15);
+    }
+
+    #toggleBtn {
+      display: block;
+      margin: 30px auto 15px;
+      padding: 14px 40px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+      color: white;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    #toggleBtn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+    }
+
+    #toggleBtn.stop {
+      background: linear-gradient(135deg, #ef5350 0%, #e53935 100%);
+      box-shadow: 0 4px 12px rgba(229, 57, 53, 0.3);
+    }
+
+    #toggleBtn.stop:hover {
+      box-shadow: 0 6px 16px rgba(229, 57, 53, 0.4);
+    }
+
+    #status {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #5a8f8c;
+      font-weight: 500;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2d5f5d;
+      margin: 50px 0 25px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .scheduler {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(45, 95, 93, 0.1);
+      padding: 30px;
+      max-width: 450px;
+      margin: 0 auto;
+      border: 1px solid rgba(129, 199, 132, 0.15);
+    }
+
+    .scheduler label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #2d5f5d;
+      font-size: 14px;
+    }
+
+    .scheduler select,
+    .scheduler input {
+      width: 100%;
+      padding: 12px 14px;
+      margin-top: 4px;
+      border-radius: 10px;
+      border: 1.5px solid #c8e6c9;
+      font-size: 14px;
+      color: #2d5f5d;
+      background: #fafffe;
+      transition: border-color 0.2s;
+    }
+
+    .scheduler select:focus,
+    .scheduler input:focus {
+      outline: none;
+      border-color: #81c784;
+    }
+
+    #scheduleBtn {
+      width: 100%;
+      margin-top: 24px;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    #scheduleBtn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+    }
+
+    #scheduleStatus {
+      margin-top: 16px;
+      color: #5a8f8c;
+      font-size: 14px;
+      text-align: center;
+      min-height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 26px;
+      }
+
+      .dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .value {
+        font-size: 24px;
+      }
+
+      .chart-container {
+        padding: 20px;
+      }
+
+      .scheduler {
+        padding: 24px;
+      }
+    }
