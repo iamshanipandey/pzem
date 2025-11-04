@@ -93,7 +93,7 @@ document.getElementById("toggleBtn").addEventListener("click", () => {
 
   if (!isRunning) {
     fetchDashboard();
-    intervalId = setInterval(fetchDashboard, 3000);
+    intervalId = setInterval(fetchDashboard, 5000);
     isRunning = true;
     btn.textContent = "⏸ Stop Live";
     btn.classList.add("stop");
