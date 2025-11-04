@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:5000/api/dashboard";
-const RELAY_URL = "http://localhost:5000/api/relayStatus";
+const API_URL = "https://pzem.onrender.com/api/dashboard";
+const RELAY_URL = "https://pzem.onrender.com/api/relayStatus";
 let intervalId = null;
 let isRunning = false;
 

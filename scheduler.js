@@ -1,4 +1,4 @@
-const CONTROL_API = "http://localhost:5000/proxy/control";
+const CONTROL_API = "https://pzem.onrender.com/proxy/control";
 
 
 async function hitRelayAPI(action) {
